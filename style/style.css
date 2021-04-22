@@ -1,0 +1,81 @@
+.center-content {
+  top: 20vh;
+  padding: 1em;
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.input-container {
+  position: relative;
+}
+
+.search-input {
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cccccc;
+  width: 20em;
+}
+
+.bpp-textfield input.with-search {
+  padding-right: 50px;
+}
+
+.bpp-textfield button.bpp-hidden ~ .open-search {
+  right: 0 !important;
+}
+
+.search-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-modal .close-modal {
+  position: absolute;
+  right: 0;
+  top: -35px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.2rem;
+}
+
+.search-modal .repo-list {
+  list-style: none;
+  overflow: auto;
+  max-height: 25vh;
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+}
+
+li.repo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  align-items: center;
+  font-size: 14px;
+}
+
+li.repo-item:hover {
+  background-color: #ecf0f1;
+}
+
+.repo-item button {
+  border: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.repo-item button:hover {
+  background-color: lightseagreen;
+  color: #fff;
+  cursor: pointer;
+}
