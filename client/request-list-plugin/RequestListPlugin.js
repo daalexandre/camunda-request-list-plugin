@@ -28,11 +28,10 @@ async function requestRepositoryData() {
 
 export default function RequestListPlugin(eventBus, propertiesPanel, propertiesProvider) {
   eventBus.on(`import.done`, function () {
-   
+
     propertiesPanel
     propertiesProvider
-    
-    debugger;
+
     const button = document.createElement("button");
     button.classList.add("action-button")
     button.attributes["data-action"] = "open-github-search";
@@ -78,7 +77,12 @@ export default function RequestListPlugin(eventBus, propertiesPanel, propertiesP
     }
 
     function setIdContent(id, value) {
-      camundaId.value = `process_${id}_${value}`;
+      camundaId.value = `process_${id}_${value}`.replace('/', '_');
+      const e = new Event("change", {
+        'bubbles': true,
+        'cancelable': true
+      });
+      camundaId.dispatchEvent(e);
     }
 
     function filterList(filter) {
